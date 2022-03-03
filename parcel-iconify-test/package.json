@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "clean:output": "rimraf dist",
+    "dev": "npm run clean:output && parcel serve src/index.html",
+    "build": "npm run clean:output && parcel build src/index.html --public-url /test_iconify/parcel/"
+  },
+  "devDependencies": {
+    "@iconify/iconify": "^2.1.2",
+    "parcel": "^2.3.2",
+    "rimraf": "^3.0.2"
+  }
+}
