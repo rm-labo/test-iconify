@@ -44,36 +44,35 @@ import { icons as epIconSet } from '@iconify-json/ep';
 import { icons as fa6SolidIconSet } from '@iconify-json/fa6-solid';
 import type { IconifyJSON } from '@iconify/types';
 
-const epArr = [
-  'circle-close',
-  'aim',
-  'alarm-clock',
-  'apple',
-  'arrow-down',
-  'avatar',
-  'baseball',
-  'bicycle',
-  'box',
-  'chat-dot-square'
-]
-const fa6SolidArr = [
-  'pager',
-  'paint-roller',
-  'paintbrush',
-  'palette',
-  'paperclip',
-  'pen-fancy',
-  'people-arrows-left-right',
-  'person-booth',
-  'person-skating',
-  'object-ungroup'
-]
+const iconNames = {
+  ep: [
+    'circle-close',
+    'aim',
+    'alarm-clock',
+    'apple',
+    'arrow-down',
+    'avatar',
+    'baseball',
+    'bicycle',
+    'box',
+    'chat-dot-square',
+  ],
+  fa6Solid: [
+    'pager',
+    'paint-roller',
+    'paintbrush',
+    'palette',
+    'paperclip',
+    'pen-fancy',
+    'people-arrows-left-right',
+    'person-booth',
+    'person-skating',
+    'object-ungroup',
+  ],
+}
 
-const epIconSetJson = getIcons(epIconSet, epArr) as IconifyJSON
-const fa6SolidIconSetJson = getIcons(fa6SolidIconSet, fa6SolidArr) as IconifyJSON
-
-addCollection(epIconSetJson)
-addCollection(fa6SolidIconSetJson)
+addCollection(getIcons(epIconSet, iconNames.ep) as IconifyJSON)
+addCollection(getIcons(fa6SolidIconSet, iconNames.fa6Solid) as IconifyJSON)
 
 export default Vue.extend({
   name: 'IndexPage3',
