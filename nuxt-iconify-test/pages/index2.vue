@@ -30,6 +30,24 @@
         <Icon icon="fa6-solid:person-skating" />
         <Icon icon="fa6-solid:object-ungroup" />
       </div>
+      <div>
+        <p style="font-size: 1rem;">以下index.vueのみロード</p>
+        <Icon icon="ic:baseline-add-to-photos" />
+        <Icon icon="ic:baseline-addchart" />
+        <Icon icon="ic:baseline-agriculture" />
+      </div>
+      <div>
+        <p style="font-size: 1rem;">以下index2.vueでのみロード</p>
+        <Icon icon="ph:activity-bold" />
+        <Icon icon="ph:address-book-bold" />
+        <Icon icon="ph:airplane" />
+      </div>
+      <div>
+        <p style="font-size: 1rem;">以下index3.vueでのみロード</p>
+        <Icon icon="ri:account-box-line" />
+        <Icon icon="ri:admin-line" />
+        <Icon icon="ri:alert-line" />
+      </div>
     </div>
   </div>
 </template>
@@ -61,6 +79,10 @@ import personBooth from '@iconify/icons-fa6-solid/person-booth';
 import personSkating from '@iconify/icons-fa6-solid/person-skating';
 import objectUngroup from '@iconify/icons-fa6-solid/object-ungroup';
 
+import activityBold from '@iconify/icons-ph/activity-bold';
+import addressBookBold from '@iconify/icons-ph/address-book-bold';
+import airplaneIcon from '@iconify/icons-ph/airplane';
+
 addIcon('ep:circle-close', circleClose)
 addIcon('ep:aim', aim)
 addIcon('ep:alarm-clock', alarmClock)
@@ -82,6 +104,10 @@ addIcon('fa6-solid:people-arrows-left-right', peopleArrowsLeftRight)
 addIcon('fa6-solid:person-booth', personBooth)
 addIcon('fa6-solid:person-skating', personSkating)
 addIcon('fa6-solid:object-ungroup', objectUngroup)
+
+addIcon('ph:activity-bold', activityBold)
+addIcon('ph:address-book-bold', addressBookBold)
+addIcon('ph:airplane', airplaneIcon)
 
 export default Vue.extend({
   name: 'IndexPage2',

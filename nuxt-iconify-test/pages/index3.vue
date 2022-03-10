@@ -30,6 +30,24 @@
         <Icon icon="fa6-solid:person-skating" />
         <Icon icon="fa6-solid:object-ungroup" />
       </div>
+      <div>
+        <p style="font-size: 1rem;">以下index.vueのみロード</p>
+        <Icon icon="ic:baseline-add-to-photos" />
+        <Icon icon="ic:baseline-addchart" />
+        <Icon icon="ic:baseline-agriculture" />
+      </div>
+      <div>
+        <p style="font-size: 1rem;">以下index2.vueでのみロード</p>
+        <Icon icon="ph:activity-bold" />
+        <Icon icon="ph:address-book-bold" />
+        <Icon icon="ph:airplane" />
+      </div>
+      <div>
+        <p style="font-size: 1rem;">以下index3.vueでのみロード</p>
+        <Icon icon="ri:account-box-line" />
+        <Icon icon="ri:admin-line" />
+        <Icon icon="ri:alert-line" />
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +61,7 @@ import { Icon, addCollection } from '@iconify/vue2/dist/offline';
 import { getIcons } from '@iconify/utils/lib/icon-set/get-icons';
 import { icons as epIconSet } from '@iconify-json/ep';
 import { icons as fa6SolidIconSet } from '@iconify-json/fa6-solid';
+import { icons as riIconSet } from '@iconify-json/ri';
 import type { IconifyJSON } from '@iconify/types';
 
 const iconNames = {
@@ -70,10 +89,17 @@ const iconNames = {
     'person-skating',
     'object-ungroup',
   ],
+  ri: [
+    'account-box-line',
+    'admin-line',
+    'alert-line',
+  ],
 }
 
 addCollection(getIcons(epIconSet, iconNames.ep) as IconifyJSON)
 addCollection(getIcons(fa6SolidIconSet, iconNames.fa6Solid) as IconifyJSON)
+addCollection(getIcons(riIconSet, iconNames.ri) as IconifyJSON)
+
 
 export default Vue.extend({
   name: 'IndexPage3',
