@@ -37,7 +37,8 @@
 <script lang="ts">
 import Vue from 'vue'
 // import IconBase from '../components/IconBase.vue'
-// import { Icon, addCollection } from '@iconify/vue2';
+// import { Icon, addCollection } from '@iconify/vue2'
+import { iconExists, listIcons } from '@iconify/vue2'
 import { Icon, addCollection } from '@iconify/vue2/dist/offline';
 import { getIcons } from '@iconify/utils/lib/icon-set/get-icons';
 import { icons as epIconSet } from '@iconify-json/ep';
@@ -78,6 +79,10 @@ export default Vue.extend({
   name: 'IndexPage3',
   components: {
     Icon,
+  },
+  mounted() {
+    console.log('index3.vue', 'mounted()', 'iconExists:', `ep:circle-close Exists？` , iconExists('ep:circle-close'))
+    console.log(listIcons())
   },
 })
 </script>

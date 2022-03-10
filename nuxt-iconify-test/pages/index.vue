@@ -32,12 +32,16 @@
 <script lang="ts">
 import Vue from 'vue'
 // import Icon from '../components/Icon.vue'
-import { Icon } from '@iconify/vue2';
+import { Icon, iconExists, listIcons } from '@iconify/vue2';
 
 export default Vue.extend({
   name: 'IndexPage',
   components: {
     Icon
+  },
+  mounted() {
+    console.log('index.vue', 'mounted()', 'iconExists:', `ep:circle-close Exists？` , iconExists('ep:circle-close'))
+    console.log(listIcons())
   },
 })
 </script>

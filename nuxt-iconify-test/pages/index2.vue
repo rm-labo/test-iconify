@@ -36,7 +36,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// import { Icon } from '@iconify/vue2'
+import { iconExists, listIcons } from '@iconify/vue2'
 import { Icon, addIcon } from '@iconify/vue2/dist/offline'
 
 import circleClose from '@iconify/icons-ep/circle-close'
@@ -87,6 +87,10 @@ export default Vue.extend({
   name: 'IndexPage2',
   components: {
     Icon,
+  },
+  mounted() {
+    console.log('index2.vue', 'mounted()', 'iconExists:', `ep:circle-close Exists？` , iconExists('ep:circle-close'))
+    console.log(listIcons())
   },
 })
 </script>
