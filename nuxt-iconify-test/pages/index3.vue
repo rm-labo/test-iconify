@@ -2,7 +2,7 @@
   <div style="font-size: 2rem;">
     <h1>iconify test nuxt(v2) - index3.vue</h1>
     <p style="font-size: 1rem;">
-      個別importを addIcon() する方式 <br>
+      個別importを addCollection() する方式 <br>
       <a href="https://docs.iconify.design/icon-components/vue2/add-collection.html">https://docs.iconify.design/icon-components/vue2/add-collection.html</a>
     </p>
     <div>
